@@ -15,7 +15,7 @@ const v2 ={
 	save() {
 		return (
 			<div { ...useBlockProps.save()}>
-				<p>{__('This is a text', 'deprecated-block')}</p>
+				<p>{__('This is a another text', 'deprecated-block')}</p>
 			</div>
 		);
 	}

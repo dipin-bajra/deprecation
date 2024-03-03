@@ -34,8 +34,10 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<div { ...useBlockProps()}>
 			<RichText
-				onChange={ (val) => setAttributes({para:val})}
-				value={attributes.para}
+								tagName="p"
+								onChange={ (val) => setAttributes({para:val})}
+								value={attributes.para}
+								placeholder="Enter text here..."
 			/>
 		</div>
 	)
