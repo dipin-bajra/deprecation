@@ -27,9 +27,8 @@ export default function save ({ attributes }) {
 						value={attributes.para}
 					/>
 				</p>
-				<p>{attributes.newText}</p>
+				<p>{attributes.changedText}</p>
 			</div>
-
 		</div>
 	)
 }

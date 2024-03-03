@@ -42,8 +42,10 @@ export default function Edit({ attributes, setAttributes }) {
 					placeholder="Enter text here..."
 				/>
 				</p>
-				<p>{attributes.newText}</p>
+				<p>{attributes.changedText}</p>
 			</div>
 		</div>
 	)
 }
+
+

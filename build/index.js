@@ -53,7 +53,38 @@ const v3 = {
     })));
   }
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ([v3, v2, v1]);
+const v4 = {
+  "attributes": {
+    "para": {
+      "type": "string",
+      "default": "This is a RichText paragraph"
+    },
+    "newText": {
+      "type": "string",
+      "default": "This is a new text added."
+    }
+  },
+  migrate({
+    para,
+    newText
+  }) {
+    return {
+      para: para,
+      changedText: newText
+    };
+  },
+  save({
+    attributes
+  }) {
+    return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save()
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
+      tagName: "p",
+      value: attributes.para
+    })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, attributes.newText)));
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ([v4, v3, v2, v1]);
 
 /***/ }),
 
@@ -119,7 +150,7 @@ function Edit({
     }),
     value: attributes.para,
     placeholder: "Enter text here..."
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, attributes.newText)));
+  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, attributes.changedText)));
 }
 
 /***/ }),
@@ -224,7 +255,7 @@ function save({
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
     tagName: "p",
     value: attributes.para
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, attributes.newText)));
+  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, attributes.changedText)));
 }
 
 /***/ }),
@@ -299,7 +330,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/deprecated-block","version":"0.1.0","title":"Deprecated Block","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"para":{"type":"string","default":"This is a RichText paragraph"},"newText":{"type":"string","default":"This is a new text added."}},"textdomain":"deprecated-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/deprecated-block","version":"0.1.0","title":"Deprecated Block","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"para":{"type":"string","default":"This is a RichText paragraph"},"changedText":{"type":"string","default":"This is a changed text added."}},"textdomain":"deprecated-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 
