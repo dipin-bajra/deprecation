@@ -21,4 +21,25 @@ const v2 ={
 	}
 }
 
-export default  [ v2, v1 ];
+const v3 = {
+	"attributes": {
+		"para": {
+			"type": "string",
+			"default": "This is a RichText paragraph"
+		}
+	},
+	save({ attributes }) {
+		return (
+			<div { ...useBlockProps.save()}>
+				<p>
+				<RichText.Content
+					tagName="p"
+					value={attributes.para}
+				/>
+				</p>
+			</div>
+		);
+	}
+
+}
+export default [ v3, v2, v1 ];

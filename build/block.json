@@ -15,6 +15,10 @@
     "para": {
       "type": "string",
       "default": "This is a RichText paragraph"
+    },
+    "newText": {
+      "type": "string",
+      "default": "This is a new text added."
     }
   },
   "textdomain": "deprecated-block",

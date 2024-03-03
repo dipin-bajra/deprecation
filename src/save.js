@@ -1,3 +1,4 @@
+
 /**
  * React hook that is used to mark the block wrapper element.
  * It provides all the necessary props like the class name.
@@ -19,12 +20,16 @@ import { __ } from '@wordpress/i18n'
 export default function save ({ attributes }) {
 	return (
 		<div {...useBlockProps.save()}>
-			<p>
-				<RichText.Content
-					tagName="p"
-					value={attributes.para}
-				/>
-			</p>
+			<div>
+				<p>
+					<RichText.Content
+						tagName="p"
+						value={attributes.para}
+					/>
+				</p>
+				<p>{attributes.newText}</p>
+			</div>
+
 		</div>
 	)
 }
