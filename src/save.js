@@ -4,7 +4,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps,RichText } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from '@wordpress/block-editor'
 import { __ } from '@wordpress/i18n'
 
 /**
@@ -16,13 +16,15 @@ import { __ } from '@wordpress/i18n'
  *
  * @return {Element} Element to render.
  */
-export default function save({ attributes }) {
+export default function save ({ attributes }) {
 	return (
-		<div { ...useBlockProps.save()}>
-			<RichText.Content
-												tagName="p"
-												value={ attributes.para }
-			/>
+		<div {...useBlockProps.save()}>
+			<p>
+				<RichText.Content
+					tagName="p"
+					value={attributes.para}
+				/>
+			</p>
 		</div>
-	);
+	)
 }
