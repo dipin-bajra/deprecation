@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 3,
+  "apiVersion": 2,
   "name": "create-block/deprecated-block",
   "version": "0.1.0",
   "title": "Deprecated Block",
@@ -10,6 +10,12 @@
   "example": {},
   "supports": {
     "html": false
+  },
+  "attributes": {
+    "para": {
+      "type": "string",
+      "default": "This is a RichText paragraph"
+    }
   },
   "textdomain": "deprecated-block",
   "editorScript": "file:./index.js",

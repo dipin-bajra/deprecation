@@ -11,5 +11,14 @@ const v1 = {
 	}
 }
 
+const v2 ={
+	save() {
+		return (
+			<div { ...useBlockProps.save()}>
+				<p>{__('This is a text', 'deprecated-block')}</p>
+			</div>
+		);
+	}
+}
 
-export default  [ v1 ];
+export default  [v2, v1 ];
